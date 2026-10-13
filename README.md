@@ -53,6 +53,10 @@ uvx django-upgrade-report
   </picture>
 </p>
 
+<p align="center">
+  The whole report for this sample project: <a href="https://derblub.github.io/django-upgrade-report/example-report.html">HTML</a> · <a href="docs/example-report.md">Markdown</a>
+</p>
+
 ## Contents
 
 - [Highlights](#highlights)

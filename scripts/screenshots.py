@@ -402,6 +402,22 @@ def main() -> int:
             check=True,
         )
         shutil.copy(report, ROOT / "docs" / "example-report.html")
+        subprocess.run(
+            [
+                *CLI,
+                str(made["shop"]),
+                "--target",
+                "5.2",
+                "--python-target",
+                "none",
+                "-f",
+                "markdown",
+                "-o",
+                str(ROOT / "docs" / "example-report.md"),
+                "--no-input",
+            ],
+            check=True,
+        )
         html_shots(
             browser,
             report,

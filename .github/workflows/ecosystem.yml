@@ -47,6 +47,10 @@ jobs:
           PYTHONPATH=src uv run --no-project --with packaging --with playwright \
             python ecosystem/build.py build --history history/data --evidence
           test -f ecosystem/site/og.png
+      - name: Add the example report
+        # The report the README shows, in full: docs/example-report.html, made by
+        # scripts/screenshots.py.
+        run: cp docs/example-report.html ecosystem/site/example-report.html
       - name: Keep this week's data
         working-directory: history
         run: |
